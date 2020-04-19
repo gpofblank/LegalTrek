@@ -2,12 +2,7 @@
 
 ### First, you should have a new DB (in my case: `Invoices`)
 
-### Second, install required dependencies:
-```
-composer install
-```
-
-### Third, migrate the required migrations:
+### Second, migrate the required migrations:
 ```
 php artisan migrate
 ```
