@@ -14,7 +14,7 @@ class DocumentsController extends Controller
      */
     public function index()
     {
-        return view('dicuments.index', ['documents' => Document::all()]);
+        return view('documents.index', ['documents' => Document::all()]);
     }
 
     /**

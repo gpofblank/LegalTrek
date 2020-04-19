@@ -38,7 +38,6 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request);
         $user = User::findOrFail($request->user_id);
         $client = $this->findOrCreateClient($request);
         $matter = $this->findOrCreateMatter($request);
@@ -105,7 +104,7 @@ class HomeController extends Controller
     {
         $document = new Document();
         $document->invoice_id = $request->invoice_num;
-        $document->location = 'public/Invoice_' . $request->invice_num . '.docx';
+        $document->location = 'public/Invoice_' . $request->invoice_num . '.docx';
         $document->save();
 
         return $document;

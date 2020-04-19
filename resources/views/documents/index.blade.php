@@ -14,7 +14,9 @@
   <tbody>
     @forelse ($documents as $document)
     <tr>
-      <th scope="row">{{ $document->id }}</th>
+      <th scope="row">
+          <a href="{{ route('documents.show', ['document' => $document]) }}">{{ $document->id }}</a>
+      </th>
       <td>{{ $document->invoice_id }}</td>
       <td>{{ $document->location }}</td>
       <td>{{ $document->created_at }}</td>

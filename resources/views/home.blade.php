@@ -11,7 +11,7 @@
   		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 	         <a class="dropdown-item" href="{{ route('clients.index', ['clients' => App\Client::all()]) }}">Clients</a>
 	         <a class="dropdown-item" href="{{ route('matters.index', ['matters' => App\Matter::all()]) }}">Matters</a>
-	         <a class="dropdown-item" href="{{ route('tasks.index', ['tasks' => App\Task::all()]) }}">Tasks</a>
+	         <a class="dropdown-item" href="{{ route('documents.index', ['documents' => App\Document::all()]) }}">Documents</a>
 	    </div>
   	</div>
   	<form class="form-inline">
