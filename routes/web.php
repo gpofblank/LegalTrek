@@ -15,4 +15,20 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/', function () {
+	return redirect()->route('home');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/all', 'HomeController@store')->name('store_all');
+
+Route::resource('/clients', 'ClientsController')->only(['index', 'show']);
+
+Route::resource('/documents', 'DocumentsController')->only(['index', 'show']);
+
+Route::resource('/events', 'EventsController')->only(['index', 'show']);
+
+Route::resource('/matters', 'MattersController')->only(['index', 'show']);
+
+Route::resource('/tasks', 'TasksController')->only(['index', 'show']);
